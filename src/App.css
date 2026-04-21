@@ -1,0 +1,9 @@
+* {
+  font-family: "Courier New", Courier, monospace;
+}
+
+body {
+  color: #eee;
+  background: linear-gradient(to bottom left, #164b4d, #206a6c);
+  height: 100vh;
+}

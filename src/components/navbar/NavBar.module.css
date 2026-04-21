@@ -1,0 +1,32 @@
+.header {
+  background: linear-gradient(to right, #3b9892, #163646);
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header h1 {
+  color: #eee;
+  margin: 0;
+  padding: 0 0.5rem;
+}
+
+.navbar {
+  padding: 0.5rem 0.5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 5px 8px;
+  cursor: pointer;
+  border: transparent;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.label {
+  text-transform: uppercase;
+}
