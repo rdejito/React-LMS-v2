@@ -1,29 +1,26 @@
 import { useState, useEffect } from "react";
-
+//import "./App.css";
 import BookList from "./components/main-components/BookList";
 import BorrowedBooks from "./components/main-components/BorrowedBooks";
 import MemberHistory from "./components/main-components/MemberHistory";
 import NavBar from "./components/navbar/NavBar";
+
 import "./App.css";
 
-import books from "/icons/books.png";
-import bookmark from "/icons/bookmark.png";
-import member from "/icons/member.png";
-
 const TABS = [
-  { id: "books", label: "Book List", icon: books },
-  { id: "borrowed", label: "Borrowed Books", icon: bookmark },
-  { id: "members", label: "Member History", icon: member },
+  { id: "books", label: "Book List", icon: "/icons/books.png" },
+  { id: "borrowed", label: "Borrowed Books", icon: "/icons/bookmark.png" },
+  { id: "members", label: "Member History", icon: "/icons/member.png" },
 ];
 
 function App() {
-  const [acitveTab, setActiveTab] = useState(() => {
+  const [activeTab, setActiveTab] = useState(() => {
     return localStorage.getItem("ACTIVE_TAB") || "books";
   });
 
   useEffect(() => {
-    return localStorage.setItem("ACTIVE_TAB", acitveTab);
-  }, [acitveTab]);
+    localStorage.setItem("ACTIVE_TAB", activeTab);
+  }, [activeTab]);
 
   return (
     <>
@@ -31,10 +28,10 @@ function App() {
         <NavBar TABS={TABS} setActiveTab={setActiveTab} />
       </div>
 
-      <main>
-        {acitveTab === "books" && <BookList />}
-        {acitveTab === "borrowed" && <BorrowedBooks />}
-        {acitveTab === "members" && <MemberHistory />}
+      <main className="main">
+        {activeTab === "books" && <BookList />}
+        {activeTab === "borrowed" && <BorrowedBooks />}
+        {activeTab === "members" && <MemberHistory />}
       </main>
     </>
   );

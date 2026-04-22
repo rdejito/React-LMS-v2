@@ -1,6 +1,6 @@
 function Borrowed({ item, book, member, isOverdue }) {
   return (
-    <tr>
+    <tr className={isOverdue ? "overdue-row" : ""}>
       <td>{book?.title}</td>
       <td>{member?.name}</td>
       <td>{new Date(item.borrowedDate).toLocaleDateString()}</td>

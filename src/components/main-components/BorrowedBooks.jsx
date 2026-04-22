@@ -1,6 +1,8 @@
 import { borrowedBooks, books, members } from "../../data/data";
 import Borrowed from "../books/Borrowed";
 
+import styles from "./BorrowedBooks.module.css";
+
 function BorrowedBooks() {
   const today = new Date();
 
@@ -9,10 +11,10 @@ function BorrowedBooks() {
     .sort((bookA, bookB) => new Date(bookB.dueDate) - new Date(bookA.dueDate));
 
   return (
-    <>
+    <div>
       <h2>Borrowed Books</h2>
 
-      <table>
+      <table className={styles.table}>
         <thead>
           <tr>
             <th>Title</th>
@@ -45,7 +47,7 @@ function BorrowedBooks() {
           })}
         </tbody>
       </table>
-    </>
+    </div>
   );
 }
 

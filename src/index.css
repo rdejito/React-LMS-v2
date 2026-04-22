@@ -1,4 +1,17 @@
-body {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+}
+
+html,
+body,
+#root {
+  min-height: 100vh;
+  background: linear-gradient(to bottom left, #164b4d, #206a6c);
+}
+
+body {
+  color: #eee;
 }

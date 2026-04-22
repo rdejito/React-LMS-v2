@@ -6,7 +6,14 @@ function MemberCard({ item, books, today }) {
   return (
     <p>
       <span>{book?.title}</span>
-      <span>
+      <span
+        style={{
+          fontSize: "13px",
+          fontStyle: "italic",
+          opacity: item.returned ? 0.55 : 1,
+          color: isOverdue ? "inherit" : "rgb(255, 194, 73)",
+        }}
+      >
         {item.returned ? "Returned" : isOverdue ? "Overdue" : "Active"}
       </span>
     </p>

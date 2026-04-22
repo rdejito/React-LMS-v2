@@ -1,9 +1,8 @@
-* {
-  font-family: "Courier New", Courier, monospace;
+main {
+  padding: 2rem;
 }
 
-body {
-  color: #eee;
-  background: linear-gradient(to bottom left, #164b4d, #206a6c);
-  height: 100vh;
+.overdue-row {
+  color: rgba(255, 162, 41, 0.9);
+  font-weight: bold;
 }

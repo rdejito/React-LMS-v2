@@ -1,6 +1,7 @@
 import { authors, books } from "../../data/data";
 import { useState } from "react";
 import Books from "../books/Books";
+import styles from "./BookList.module.css";
 
 function BookList() {
   const [input, setInput] = useState("");
@@ -14,9 +15,9 @@ function BookList() {
   );
 
   return (
-    <>
+    <div className={styles.bookList}>
       <h2>Book List</h2>
-      <div>
+      <div className={styles.bookInput}>
         <input
           type="text"
           value={input}
@@ -30,7 +31,7 @@ function BookList() {
           <Books filteredBooks={filteredBooks} authors={authors} />
         )}
       </div>
-    </>
+    </div>
   );
 }
 

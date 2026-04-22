@@ -1,0 +1,11 @@
+.bookList {
+  padding: 0 2rem;
+}
+
+.bookInput input {
+  border: 1px solid #eee;
+  border-radius: 4px;
+  padding: 0.6rem 1rem;
+  outline: none;
+  width: 35%;
+}

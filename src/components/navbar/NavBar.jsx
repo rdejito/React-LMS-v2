@@ -12,7 +12,7 @@ function NavBar({ TABS, setActiveTab }) {
             className={styles.btn}
           >
             <span className={styles.icon}>
-              <img src={tab.icon} alt="Book" width={20} height={20} />
+              <img src={tab.icon} alt="Book" width={20} height={20 } />
             </span>
             <span className={styles.label}>{tab.label}</span>
           </button>

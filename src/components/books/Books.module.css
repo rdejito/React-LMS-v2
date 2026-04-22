@@ -1,0 +1,16 @@
+.filteredBooks {
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.filteredBooks li {
+  list-style: lower-greek;
+  padding: 0.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.filteredBooks li:last-child {
+  border-bottom: none;
+}

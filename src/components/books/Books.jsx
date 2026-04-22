@@ -1,10 +1,12 @@
+import styles from './Books.module.css'
+
 function Books({ filteredBooks, authors }) {
   return (
-    <ul>
+    <ul className={styles.filteredBooks}>
       {filteredBooks.map((book) => {
         const author = authors.find((author) => author.id === book.authorId);
         return (
-          <li key={book.id}>
+          <li key={book.id} className={styles.books}>
             {book.title} - <em>{author?.name}</em>
           </li>
         );
