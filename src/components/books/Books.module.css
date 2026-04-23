@@ -6,9 +6,12 @@
 }
 
 .filteredBooks li {
-  list-style: lower-greek;
-  padding: 0.5rem;
+  list-style: decimal;
+  padding: 0.75rem;
   border-bottom: 1px solid #eee;
+  margin-top: 0.5rem;
+  line-height: 1.4;
+  word-wrap: break-word;
 }
 
 .filteredBooks li:last-child {

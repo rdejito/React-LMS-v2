@@ -6,3 +6,9 @@ main {
   color: rgba(255, 162, 41, 0.9);
   font-weight: bold;
 }
+
+@media (max-width: 768px) {
+  .main {
+    padding: 1rem;
+  }
+}
