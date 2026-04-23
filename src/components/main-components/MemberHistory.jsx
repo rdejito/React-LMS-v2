@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { borrowedBooks, members, books } from "../../data/data";
 import Members from "../members/Member";
+import styles from "./MemberHistory.module.css";
 
 function MemberHistory() {
   const today = new Date();
@@ -26,9 +27,10 @@ function MemberHistory() {
         placeholder="Search member by name..."
         value={search}
         onChange={handleInputChange}
+        className={styles.memberSearch}
       />
 
-      <div>
+      <div className={styles.memberList}>
         {filteredMembers.map((member) => {
           const history = borrowedBooks.filter(
             (borrower) => borrower.memberId === member.id,

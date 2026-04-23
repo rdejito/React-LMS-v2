@@ -3,7 +3,7 @@ import styles from "./Member.module.css";
 
 function Members({ member, today, books, history }) {
   return (
-    <div key={member.id} className={styles.memberList}>
+    <div key={member.id} className={styles.memberCard}>
       <div className={styles.memberHeader}>
         <span>
           <img src="/icons/member.png" alt="Member Icon" />

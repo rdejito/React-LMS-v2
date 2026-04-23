@@ -11,7 +11,8 @@ function MemberCard({ item, books, today }) {
           fontSize: "13px",
           fontStyle: "italic",
           opacity: item.returned ? 0.55 : 1,
-          color: isOverdue ? "inherit" : "rgb(255, 194, 73)",
+          color: isOverdue ? "rgb(255, 194, 73)" : "inherit",
+          marginLeft: "8px",
         }}
       >
         {item.returned ? "Returned" : isOverdue ? "Overdue" : "Active"}
